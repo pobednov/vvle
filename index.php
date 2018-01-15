@@ -19,4 +19,6 @@ echo First::Sey();
    document.write(result);
 
    document.write('vinny');
+   document.write('vinny2');
+   //for 1
 </script>
