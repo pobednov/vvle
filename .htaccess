@@ -1,0 +1,53 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+# Installation directory
+RewriteBase /
+
+# Protect hidden files from being viewed
+<Files .*>
+	Order Deny,Allow
+	Deny From All
+</Files>
+
+# Protect application and system files from being viewed
+#RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+
+
+RewriteRule ^ny/ - [L]
+RewriteCond %{HTTP_HOST} ^ny\.perse\.ru$
+RewriteCond %{DOCUMENT_ROOT}/ny%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^ny\.vvle\.ru$
+RewriteRule (.*) ny/$1 [L,QSA]
+
+RewriteRule ^led/ - [L]
+RewriteCond %{HTTP_HOST} ^led\.vvle\.ru$
+RewriteCond %{DOCUMENT_ROOT}/led%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^led\.vvle\.ru$
+RewriteRule (.*) led/$1 [L,QSA]
+
+RewriteRule ^barton/ - [L]
+RewriteCond %{HTTP_HOST} ^barton\.vvle\.ru$
+RewriteCond %{DOCUMENT_ROOT}/barton%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^barton\.vvle\.ru$
+RewriteRule (.*) barton/$1 [L,QSA]
+
+RewriteRule ^klinok/ - [L]
+RewriteCond %{HTTP_HOST} ^klinok\.vvle\.ru$
+RewriteCond %{DOCUMENT_ROOT}/klinok%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^klinok\.vvle\.ru$
+RewriteRule (.*) klinok/$1 [L,QSA]
+
+
+<FilesMatch "\.(html|htm)$">
+Header set Cache-Control "max-age=7200, must-revalidate"
+</FilesMatch>
+
+
+
+
+
