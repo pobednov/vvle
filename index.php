@@ -22,3 +22,20 @@ echo First::Sey();
    document.write('vinny2');
    //for 1
 </script>
+
+<style>
+   .vinny {width: 100px; height: 100px; border: 1px solid blue; transition: 0.5s;}
+   .vinny:hover { transform: scale(1.1, 1.2); margin-top: 15px; margin-left: 15px; transform: rotate(15deg);  }
+</style>
+
+<div class = "vinny">
+
+</div>
+
+<span class="feature2"></span>
+
+<div class="for_feature1"></div>
+
+
+<div class = "feature3"></div>
+fdsfdsss
