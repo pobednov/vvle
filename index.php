@@ -33,3 +33,8 @@ echo First::Sey();
 </div>
 
 <span class="feature2"></span>
+
+<div class="for_feature1"></div>
+
+
+<div class = "feature3"></div>
