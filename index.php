@@ -218,5 +218,15 @@ echo "<br><br><br>";
     listing(Fruits);
 
 
+
+    LastElement(Fruits);
+
+    function LastElement(obj){
+
+        var counter = obj.length;
+        document.write(obj[counter-1]);
+
+    }
+
 </script>
 <div></div>
