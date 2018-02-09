@@ -203,7 +203,18 @@ echo "<br><br><br>";
 
     //document.write('<br/>'+VinnysArray.length);
 
+    var Fruits = ['apple', 'lemon', 'grape','pineapple'];
+    Fruits.pop();
+    Fruits.push('mango');
 
 
+
+
+    var listing = function one(array){
+        for ( var i = 0; i < array.length ; i++ ){
+            document.write('<br/>'+array[i]);
+        }
+    }
+    listing(Fruits);
 </script>
 <div></div>
