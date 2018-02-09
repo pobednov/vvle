@@ -216,5 +216,7 @@ echo "<br><br><br>";
         }
     }
     listing(Fruits);
+
+
 </script>
 <div></div>
